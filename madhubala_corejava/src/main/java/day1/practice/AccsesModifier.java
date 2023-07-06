@@ -1,5 +1,5 @@
 package day1.practice;
-public class AccesesMdifier {
+public class AccsesModifier {
 	private static String a = "a";
 	private static String b = "b";
 	private static String c = "c";
