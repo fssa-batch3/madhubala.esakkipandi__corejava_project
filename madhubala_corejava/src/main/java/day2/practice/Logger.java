@@ -1,41 +1,57 @@
 package day2.practice;
 
-
 public class Logger {
 	
-	
-	
-	public void debug (String msg) {
-		System.out.println("DEBUG: " + msg);
-	}
-
-	public void log(String infomsg) {
-
-		System.out.println("Log: " + infomsg);
-	
-	}
-	
-	public void erorr(String errormsg) {
+	public static void debug (String msg) {
 		
-	
-		System.out.println("erorr: " + errormsg);
+		
+		
+		
+		System.out.println("DEBUG: " + msg);
+		
+	}
+	public static void info (String msg) {
+		
+		System.out.println("LOG: " + msg);
 	}
 	
-
+	public static void error (String msg) {
+		
+		System.out.println("ERROR: " + msg);
+	}
+	
+	public static void debug (int num) {
+		System.out.println("DEBUG: " + num);
+		
+	}
+	
+	public static void info (int num) {
+		System.out.println("LOG: " + num);
+	}
+	
+	public static void error (int num) {
+		
+		
+		System.out.println("ERROR: " + num);
+	}
+	
+	
 	public static void main(String[] args) {
 		
 		
 		
-		Logger message = new Logger();
-		message.debug("there ae some issues in debug that");
-		message.log("log this value ");
-
-		message.erorr("compilation eror");
-
-		message.debug("In calling mthod there are error ");
+		Logger log=new Logger();
+		
+		log.info("Info about practice");
+		log.error("this is the error message");
+		log.debug("There are some issuses debug that");
+		
+		
+		log.info(10);
+		log.error(10);
+		log.debug(10);
 		
 		
 		
 	}
-	
 }
