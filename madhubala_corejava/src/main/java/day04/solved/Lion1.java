@@ -11,6 +11,7 @@ package day04.solved;
 		this.age = age;
 	}
 }
+ 
 public class Lion1 extends Animals {  // extends keyword use to inherit variables and methods from Animal
 	private void roar() {
 		System.out.println("The " + getAge() + " year old lion says: Roar!");

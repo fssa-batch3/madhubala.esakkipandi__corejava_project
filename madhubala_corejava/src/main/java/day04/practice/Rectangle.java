@@ -1,5 +1,4 @@
-package day04.solved;
-
+package day04.practice;
 
 
 
@@ -17,14 +16,19 @@ public class Rectangle extends Polygon {
 		this.breadth = breadth;
 	}
 
+	
+	
 	@Override
 	public double calculateArea() {
-		// TODO Auto-generated method stub
 		return this.length * this.breadth;
 	}
 	
 	public int getNumberOfSides() {
 		return super.numberOfSides;
+	}
+	
+	public double calculateCircumstance() {
+		return 2*(length+breadth) ;
 	}
 
 }

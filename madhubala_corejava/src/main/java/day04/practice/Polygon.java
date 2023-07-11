@@ -1,4 +1,4 @@
-package day04.solved;
+package day04.practice;
 
 public abstract class Polygon {
 	protected int numberOfSides;
@@ -14,5 +14,10 @@ public abstract class Polygon {
 	
 	
 	public abstract double calculateArea();
+	
+
+	public abstract double calculateCircumstance();
+	
+	
 	
 }
