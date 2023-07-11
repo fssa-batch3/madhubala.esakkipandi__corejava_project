@@ -10,7 +10,7 @@ public class RightAngledTriangle extends Polygon {
 	public RightAngledTriangle(double a, double b,double c) throws Exception {
 		super(4);
 		if(a <= 0 || b <= 0 ||c<=0) {
-			throw new Exception("Invalid dimensions for a rectangle");
+			throw new Exception("Invalid dimensions for a Right Angle triangle");
 		}
 		this.a = a;
 		this.b = b;
@@ -20,13 +20,7 @@ public class RightAngledTriangle extends Polygon {
 	@Override
 	
 	
-	public double calculateArea() {
-		return this.a + this.b+this.c;
-	}
 	
-	public int getNumberOfSides() {
-		return super.numberOfSides;
-	}
 	
 	public double calculateCircumstance() {
 		return this.a + this.b+this.c;
