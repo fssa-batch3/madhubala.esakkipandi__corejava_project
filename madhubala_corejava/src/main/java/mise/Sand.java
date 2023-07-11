@@ -1,4 +1,4 @@
-package myprac;
+package mise;
 public class Sand {
 
 private static int numShovels;
