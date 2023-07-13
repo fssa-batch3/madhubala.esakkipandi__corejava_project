@@ -13,7 +13,7 @@ public abstract class Polygon {
 	}
 	
 	
-	public abstract double calculateArea();
+	
 	
 
 	public abstract double calculateCircumstance();

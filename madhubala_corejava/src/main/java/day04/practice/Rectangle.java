@@ -18,17 +18,12 @@ public class Rectangle extends Polygon {
 
 	
 	
-	@Override
-	public double calculateArea() {
-		return this.length * this.breadth;
-	}
+
 	
-	public int getNumberOfSides() {
-		return super.numberOfSides;
-	}
+	
 	
 	public double calculateCircumstance() {
-		return 2*(length+breadth) ;
+		return 2*(this.length+this.breadth) ;
 	}
 
 }

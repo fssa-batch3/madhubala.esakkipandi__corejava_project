@@ -1,11 +1,6 @@
 package mise;
 
-
-
-
-
-
- class Hare {
+class Hare {
 
 public void init() {
 
@@ -21,27 +16,28 @@ System.out.println("hare-");
 
 }
 
-
 public class Tortoise extends Hare {
 
-protected void race(Hare hare) {
+	protected void race(Hare hare) {
 
-hare.init(); // x1
+		hare.init(); // x1
 
-hare.race(); // x2
+		hare.race(); // x2
 
-System.out.print("tortoise-");
+		System.out.print("tortoise-");
+
+	}
+
+	public static void main(String[] args) {
+
+		Tortoise tortoise = new Tortoise();
+
+		Hare hare = new Hare();
+
+		tortoise.race(hare);
+
+	}
 
 }
 
-public static void main(String[] args) {
 
-Tortoise tortoise = new Tortoise();
-
-Hare hare = new Hare();
-
-tortoise.race(hare);
-
-}
-
-}
