@@ -1,4 +1,4 @@
-package mise;
+package misc;
 
 class Hare {
 

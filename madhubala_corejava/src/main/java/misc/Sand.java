@@ -1,4 +1,4 @@
-package mise;
+package misc;
 public class Sand {
 
 private static int numShovels;
