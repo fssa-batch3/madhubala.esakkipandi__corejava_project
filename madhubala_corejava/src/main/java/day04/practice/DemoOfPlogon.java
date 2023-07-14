@@ -1,6 +1,7 @@
 package day04.practice;
 
 public class DemoOfPlogon {
+	
 	public static void main(String[] args) {
 
 		try {
@@ -9,7 +10,8 @@ public class DemoOfPlogon {
             System.out.println(rectangle.calculateCircumstance());
             System.out.println(rightangletri.calculateCircumstance());
 		}catch(Exception e) {
-			System.out.println(e.getMessage());			
+			System.out.println(e.getMessage());	
+			
 		}
 	}
 }

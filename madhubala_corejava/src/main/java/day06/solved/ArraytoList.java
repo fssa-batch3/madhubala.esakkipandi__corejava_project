@@ -9,8 +9,18 @@ public static void main(String[] args) {
 	deptNames[0] = "CSE";
 	deptNames[1] = "EEE";
 	deptNames[2] = "MECH";
+	
+	
+	
+	
+	
 	List<String> list = Arrays.asList(deptNames);
 	
+	
+	
+	
 	System.out.println(list);
+	
+	
 }
 }

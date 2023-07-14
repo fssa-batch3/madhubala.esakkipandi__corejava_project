@@ -33,16 +33,12 @@ package day2.solved;
 }
 
 
-
-
-
-
 public class TestBankAccount {
 
 	 
     public static void main(String[] args) {
          
-        //create Account
+  
         BankAccount acct1 = new BankAccount();
         acct1.setAccNo("A101");
         acct1.setName( "Krishna" );
@@ -51,5 +47,7 @@ public class TestBankAccount {
         System.out.println(acct1.getAccNo());
         System.out.println(acct1.getName());
         System.out.println(acct1.getBalance());
+        
+        
     }
 }

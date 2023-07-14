@@ -3,7 +3,6 @@ import java.util.ArrayList;
 
 public class TestArrayList {
  
-    //without using generics
     public static void main(String[] args) {
      
         // Store the city names in the List
