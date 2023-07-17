@@ -3,10 +3,7 @@ package day2.practice;
 public class Logger {
 	
 	public static void debug (String msg) {
-		
-		
-		
-		
+	
 		System.out.println("DEBUG: " + msg);
 		
 	}
@@ -30,23 +27,17 @@ public class Logger {
 	}
 	
 	public static void error (int num) {
-		
-		
+	
 		System.out.println("ERROR: " + num);
 	}
-	
-	
+
 	public static void main(String[] args) {
-		
-		
-		
+
 		Logger log=new Logger();
-		
 		log.info("Info about practice");
 		log.error("this is the error message");
 		log.debug("There are some issuses debug that");
-		
-		
+				
 		log.info(10);
 		log.error(10);
 		log.debug(10);

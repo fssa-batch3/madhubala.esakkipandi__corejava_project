@@ -1,7 +1,5 @@
 package day2.practice;
 
-
-
 public class User {
 
 	 private String name;  
@@ -19,8 +17,7 @@ public class User {
 	    public void setName(String name) {  
 				this.name = name; 
 	    }
-	    
-	    
+
 	    public String getId() {  
 	        return id;
 	    }
@@ -28,9 +25,7 @@ public class User {
 	    public void setId(String i) {  
 				this.id = i; 
 	    }
-	    
-	    
-	    
+
 	    public String getPassword() {  
 	        return password;
 	    }
@@ -47,9 +42,7 @@ public class User {
 	    public void setemailId(String email) {  
 				this.email = email; 
 	    }
-	    
-	    
-	    
+
 	    public static void main(String[] args) {
 
 	    	User user = new User();
@@ -68,12 +61,6 @@ public class User {
 	    	user.setemailId("Madhu@gmail.com");      
 	    	String emialid = user.getemailId();  
 	    	System.out.println(emialid);   
-	    	
-	    	
-
-	    	
-	    	
-	    	
-	    	
+	
 		}
 }
