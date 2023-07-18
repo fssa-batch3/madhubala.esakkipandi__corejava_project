@@ -1,39 +1,38 @@
 package day08.practice;
-import java.util.ArrayList;
+
 import java.util.HashMap;
-import java.util.List;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class employee {
     public static void main(String[] args) {
-        String n = "HR,Ram\n" +
-                       "HR,Suresh\n" +
-                       "IT,Basker\n" +
-                       "IT,Joseph\n" +
-                       "Admin,Sundar";
+        String n = "HR,Ram\n" + "HR,Suresh\n" + "IT,Basker\n" + "IT,Joseph\n" + "Admin,Sundar";
 
-        HashMap<String, List<String>> listofemployee = new HashMap<String, List<String>>();
+        HashMap<String, TreeSet<String>> listOfEmployee = new HashMap<String, TreeSet<String>>();
+
         String[] lines = n.split("\n");
 
         for (String line : lines) {
             String[] parts = line.split(",");
             if (parts.length == 2) {
                 String dep = parts[0].trim();
-                String empname = parts[1].trim();
+                String empName = parts[1].trim();
 
-                List<String> empDet = listofemployee.get(dep);
+                TreeSet<String> empDet = listOfEmployee.get(dep);
                 if (empDet == null) {
-                	empDet = new ArrayList<String>();
-                	listofemployee.put(dep, empDet);
+                    empDet = new TreeSet<String>();
+                    listOfEmployee.put(dep, empDet);
                 }
-                
-                empDet.add(empname);
-               
+
+                empDet.add(empName);
             }
         }
 
-        for (String dep : listofemployee.keySet()) {
-            List<String> employees = listofemployee.get(dep);
-            System.out.println(dep + ": " + employees);
+        TreeMap<String, TreeSet<String>> sortedListOfEmployee = new TreeMap<String, TreeSet<String>>(listOfEmployee);
+
+        for (String dep : sortedListOfEmployee.keySet()) {
+            TreeSet<String> employees = sortedListOfEmployee.get(dep);
+            System.out.println(dep + ": " + String.join(", ", employees));
         }
     }
 }

@@ -20,9 +20,6 @@ public class Namescount {
 				
 				
 			}
-			
-	
-		
 
 		HashMap<String,Integer> maps=new HashMap<String,Integer>();
 		

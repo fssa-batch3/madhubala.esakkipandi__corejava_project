@@ -1,0 +1,83 @@
+package day09.practice;
+import java.util.List;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
+
+
+class CustomTask {
+    private int id;
+    private String name;
+    private LocalDate deadline;
+    private int priority; 
+
+    public CustomTask(int id, String name, LocalDate deadline, int priority) {
+        this.id = id;
+        this.name = name;
+        this.deadline = deadline;
+        this.priority = priority;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public LocalDate getDeadline() {
+        return deadline;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+}
+
+class TaskComparator implements Comparator<CustomTask> {
+    public int compare(CustomTask t1, CustomTask t2) {
+        // Compare by deadline
+        int deadlineComparison = t1.getDeadline().compareTo(t2.getDeadline());
+        if (deadlineComparison != 0) {
+            return deadlineComparison;
+        }
+
+        // If the deadlines are the same, compare by priority
+        return Integer.compare(t1.getPriority(), t2.getPriority());
+    }
+}
+
+public class PrioritySortingDemo {
+
+    public static void main(String[] args) {
+
+        List<CustomTask> tasks = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of tasks:");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        int count = 0;
+        while (count < n) {
+            System.out.println("Enter the task details of " + (count + 1) + " as id, name, priority, deadline (in yyyy-MM-dd format):");
+            int id = scanner.nextInt();
+            scanner.nextLine();
+            String name = scanner.nextLine();
+            LocalDate deadline = LocalDate.parse(scanner.nextLine());
+            int priority = scanner.nextInt();
+
+            tasks.add(new CustomTask(id, name, deadline, priority));
+            count++;
+        }
+
+        Collections.sort(tasks, new TaskComparator());
+
+        System.out.println("Tasks in sorted order by deadline and priority:");
+        for (CustomTask task : tasks) {
+            System.out.println(task.getId() + "," + task.getName() + "," + task.getPriority() + "," + task.getDeadline());
+        }
+    }
+}
