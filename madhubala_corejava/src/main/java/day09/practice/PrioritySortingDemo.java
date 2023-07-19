@@ -39,13 +39,12 @@ class CustomTask {
 
 class TaskComparator implements Comparator<CustomTask> {
     public int compare(CustomTask t1, CustomTask t2) {
-        // Compare by deadline
         int deadlineComparison = t1.getDeadline().compareTo(t2.getDeadline());
         if (deadlineComparison != 0) {
             return deadlineComparison;
         }
 
-        // If the deadlines are the same, compare by priority
+        
         return Integer.compare(t1.getPriority(), t2.getPriority());
     }
 }
@@ -58,7 +57,7 @@ public class PrioritySortingDemo {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number of tasks:");
         int n = scanner.nextInt();
-        scanner.nextLine();
+      
 
         int count = 0;
         while (count < n) {
@@ -75,7 +74,6 @@ public class PrioritySortingDemo {
 
         Collections.sort(tasks, new TaskComparator());
 
-        System.out.println("Tasks in sorted order by deadline and priority:");
         for (CustomTask task : tasks) {
             System.out.println(task.getId() + "," + task.getName() + "," + task.getPriority() + "," + task.getDeadline());
         }

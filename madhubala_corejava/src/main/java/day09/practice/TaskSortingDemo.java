@@ -58,7 +58,6 @@ public class TaskSortingDemo {
 
         Collections.sort(tasks, new NameComparator());
 
-        System.out.println("Tasks in sorted order by name:");
         for (Task task : tasks) {
             System.out.println(task.getId() + "," + task.getName() + "," + task.getDeadline());
         }

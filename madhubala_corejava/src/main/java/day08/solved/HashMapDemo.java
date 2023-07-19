@@ -1,12 +1,12 @@
 package day08.solved;
 
-import java.util.HashMap;
+import java.util.TreeMap;
 
 public class HashMapDemo {
 public static void main(String[] args) {
 	
 
-			HashMap<String, Integer> deptMap = new HashMap<String, Integer>();
+			TreeMap<String, Integer> deptMap = new TreeMap<String, Integer>();
 			deptMap.put("HR", 5);
 			deptMap.put("ADMIN", 10);
 			deptMap.put("DEVELOPERS", 300);
@@ -16,7 +16,6 @@ public static void main(String[] args) {
 
 				Integer count = deptMap.get(deptName);
 				System.out.println("Department Name:" + deptName + " and Employee Count :" + count);
-
 			}
 
 

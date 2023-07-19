@@ -17,6 +17,7 @@ public static void main(String[] args) {
 	
 	
 	
+	
 for(String element:cityList) {
 	
 	if(!cityList2.contains(element)) {
