@@ -52,6 +52,7 @@ public class Main {
 
         System.out.println("Duplicates Tasks:");
         for (Task task : tasksList) {
+        	
             System.out.println(task.getName() + " - " + task.getDeadline());
         }
 
@@ -64,3 +65,15 @@ public class Main {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

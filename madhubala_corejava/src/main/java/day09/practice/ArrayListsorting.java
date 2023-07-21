@@ -3,9 +3,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
 public class ArrayListsorting {
-
-	
-	
+		
 public static void main(String[] args) {
 	
 	Scanner num=new Scanner(System.in);
@@ -25,8 +23,6 @@ public static void main(String[] args) {
 		System.out.println(n1);
 		
 	}
-	
-	
 	
 }
 	
