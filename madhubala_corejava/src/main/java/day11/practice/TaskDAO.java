@@ -9,7 +9,7 @@ public class TaskDAO {
 	}
     public static boolean createTask(Task task) throws DAOException {
         if (task == null) {
-            throw new DAOException("Cannot run prepared statement. Task is null.");
+            throw new DAOException("Cannot run prepared statement.");
         }
 
         String url = "jdbc:mysql://localhost:3306/task"; 

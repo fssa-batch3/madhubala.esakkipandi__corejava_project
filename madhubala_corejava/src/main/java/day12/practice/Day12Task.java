@@ -1,5 +1,6 @@
 package day12.practice;
-public class Task {
+
+public class Day12Task {
 	int id;
 	String name;
 	String status;
