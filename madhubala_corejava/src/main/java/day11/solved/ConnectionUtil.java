@@ -10,9 +10,10 @@ public class ConnectionUtil {
     public static Connection getConnection()  {
  
         Connection con = null;
-        String url = "jdbc:mysql://localhost/YOURDB";
-        String userName = "USERNAME";
-        String passWord = "PASSWORD";
+        String url = 
+        		"jdbc:mysql://aws.connect.psdb.cloud:3306/core_java";
+        String userName = "273z1j23ezmyz3yglqia";
+        String passWord = "pscale_pw_dfN5v4Y7cXHWgSEZ6HxdkF7I0wmnkdNJ3wvLamlAros";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, userName, passWord);

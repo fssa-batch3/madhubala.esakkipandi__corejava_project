@@ -16,15 +16,12 @@ public class TestTaskDAO {
     
     @Test
     public void testCreateTask() throws DAOException {
-        // Create a new Task object with test data
         Day12Task task = new Day12Task();
         task.name = "Test Task";
         task.status = "New";
 
-        // Call the createTask method
         TaskDAO.createTask(task);
 
-        // Now, you can retrieve the task using getAllTasks and verify if it was created successfully
         List<Day12Task> allTasks = TaskDAO.getAllTasks();
         boolean taskFound = false;
         for (Day12Task t : allTasks) {
@@ -34,16 +31,13 @@ public class TestTaskDAO {
             }
         }
 
-        // Assert that the task was found in the list
         assertEquals(true, taskFound);
     }
 
     @Test
     public void testGetAllTasks() throws DAOException {
-        // This test case will check if the getAllTasks method returns a non-empty list
         List<Day12Task> allTasks = TaskDAO.getAllTasks();
 
-        // Assert that the list is not null and not empty
         assertEquals(false, allTasks.isEmpty());
     }
     

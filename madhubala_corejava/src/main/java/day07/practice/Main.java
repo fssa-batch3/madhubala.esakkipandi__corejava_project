@@ -21,14 +21,15 @@ class Task {
     }
 
   
-    public boolean equals(Object obj) {
-        if (this == obj) {
+    public boolean equals(Object obj) {//overing the equlas mehtod 
+    	//the Object class and is used to check if two objects are equal based on their attributes.
+        if (this == obj) {//this object (the current instance) and the obj object passed as an argument to the method 
             return true;
         }
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Task otherTask = (Task) obj;
+        Task otherTask = (Task) obj;///type catsing to comparision  obj is in obj in object class it difert type so wee need to type cast it to task object type
         return name.equals(otherTask.name) && deadline.equals(otherTask.deadline);
     }
 
