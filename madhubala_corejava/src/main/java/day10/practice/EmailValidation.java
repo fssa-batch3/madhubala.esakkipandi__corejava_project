@@ -1,9 +1,10 @@
 package day10.practice;
+
 import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-// EmailValidator class to validate email addresses
 class EmailValidator {
     private static final String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
     private static final Pattern pattern = Pattern.compile(EMAIL_PATTERN);
@@ -31,7 +32,7 @@ class User {
 }
 
 class UserManager {
-    private ArrayList<User> userList;
+    private List<User> userList;
 
     public UserManager() {
         userList = new ArrayList<>();
@@ -44,6 +45,10 @@ class UserManager {
         } else {
             throw new InvalidEmailException("Invalid email address: " + email);
         }
+    }
+
+    public List<User> getUserList() {
+        return userList;
     }
 }
 
@@ -59,6 +64,7 @@ public class EmailValidation {
         }
     }
 }
+
 
 class InvalidEmailException extends Exception {
     public InvalidEmailException() {

@@ -1,17 +1,15 @@
 package day07.practice;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class RemoveDuplicates {
+public class RemoveDuplicatesTest {
 
-    public void removeDuplicates(ArrayList<Integer> list) {
-        HashSet<Integer> set = new HashSet<>(list);
-        list.clear();
-        list.addAll(set);
-    }
-
-    public static void main(String[] args) {
+    @Test
+    public void testRemoveDuplicates() {
         ArrayList<Integer> listofint = new ArrayList<Integer>();
         listofint.add(2);
         listofint.add(2);
@@ -21,9 +19,15 @@ public class RemoveDuplicates {
         listofint.add(6);
         listofint.add(4);
 
-        System.out.println("Original List: " + listofint);
+        ArrayList<Integer> expectedList = new ArrayList<Integer>();
+        expectedList.add(2);
+        expectedList.add(4);
+        expectedList.add(5);
+        expectedList.add(6);
+
         RemoveDuplicates remover = new RemoveDuplicates();
         remover.removeDuplicates(listofint);
-        System.out.println("List after removing duplicates: " + listofint);
+
+        Assertions.assertEquals(expectedList, listofint);
     }
 }
