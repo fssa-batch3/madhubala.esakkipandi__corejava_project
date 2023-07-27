@@ -48,5 +48,4 @@ public class ArraylistoneTest {
         assertTrue(cityList2.contains("Mumbai"));
     }
 
-    // Add more test cases based on your requirements and edge cases.
 }

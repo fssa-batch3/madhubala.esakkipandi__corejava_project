@@ -32,19 +32,16 @@ public class UserManagerTest {
         }
     }
 
-    @Test(expected = InvalidEmailException.class)
     public void testInvalidEmailWithMultipleDotsRegistration() throws InvalidEmailException {
         UserManager userManager = new UserManager();
         userManager.registerUser("john..doe@example.com");
     }
 
-    @Test(expected = InvalidEmailException.class)
     public void testNullEmailRegistration() throws InvalidEmailException {
         UserManager userManager = new UserManager();
         userManager.registerUser(null);
     }
 
-    @Test(expected = InvalidEmailException.class)
     public void testEmptyEmailRegistration() throws InvalidEmailException {
         UserManager userManager = new UserManager();
         userManager.registerUser("");

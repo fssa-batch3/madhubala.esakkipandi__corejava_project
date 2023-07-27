@@ -1,45 +1,23 @@
 package day08.practice;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Namescount {
 
-	
-	public static void main(String[] args) {
-		
-		
-		Scanner name=new Scanner(System.in);
-		System.out.println("lkjhgfdfgh");
-		String[] arr=new String[10];
+    public Map<String, Integer> processAndReturnMap(Scanner scanner) {
+        Map<String, Integer> map = new HashMap<>();
 
-			for( int i=0;i<arr.length;i++) {
-				
-				arr[i]=name.nextLine().toLowerCase();
-	
-			}
+        for (int i = 0; i < 10; i++) {
+            String name = scanner.nextLine().toLowerCase();
 
-		HashMap<String,Integer> maps=new HashMap<String,Integer>();
-		
-		for(int i=0;i<arr.length;i++) {
-			
-			if(maps.get(arr[i])==null) {
-				
-				maps.put(arr[i], 1);
-				
-			}
-			else {
-				
-				int coun=maps.get(arr[i]);
-				coun++;
-				maps.put(arr[i],coun );
-				
-			}
-			
-		}
-		
-		System.out.println(maps);
+            if (map.containsKey(name)) {
+                map.put(name, map.get(name) + 1);
+            } else {
+                map.put(name, 1);
+            }
+        }
 
-	}
-
-
+        return map;
+    }
 }

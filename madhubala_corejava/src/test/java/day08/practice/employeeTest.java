@@ -25,7 +25,7 @@ public class employeeTest {
 
         employee.main(new String[0]);
 
-        System.setOut(System.out); // Reset to the standard output
+        System.setOut(System.out); 
 
         String actualOutput = outputStream.toString().trim();
         String[] outputLines = actualOutput.split(System.lineSeparator());
